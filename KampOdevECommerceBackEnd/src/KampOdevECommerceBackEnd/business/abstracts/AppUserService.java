@@ -10,5 +10,4 @@ public interface AppUserService {
 	List<AppUser> getAll();
 	boolean isRegistered(Applicant applicant);
 	void save(Applicant applicant);
-
 }

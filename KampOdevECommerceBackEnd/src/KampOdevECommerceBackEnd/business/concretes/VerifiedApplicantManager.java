@@ -8,10 +8,8 @@ public class VerifiedApplicantManager extends VerifiedApplicantDao implements Ve
 	
 	@Override
 	public boolean isVerified(Applicant applicant) {
-		// TODO Auto-generated method stub
 		return super.isVerified(applicant);
-	}
-	
+	}	
 	
 	@Override
 	public boolean sentEmail(Applicant applicant) {
@@ -21,8 +19,7 @@ public class VerifiedApplicantManager extends VerifiedApplicantDao implements Ve
 		}else {
 			System.out.println("Bilgileriniz hatali. Tekrar deneyin.");
 			return false;
-		}
-		
+		}		
 	}
 	
 	@Override
@@ -44,12 +41,4 @@ public class VerifiedApplicantManager extends VerifiedApplicantDao implements Ve
 	public void feedback(Applicant applicant) {
 		System.out.println("Hata loglandi.");
 	}
-
-
-	
-	
-	
-
-	
-
 }

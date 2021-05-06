@@ -1,7 +1,6 @@
 package KampOdevECommerceBackEnd;
 
 import KampOdevECommerceBackEnd.business.concretes.AppUserManager;
-import KampOdevECommerceBackEnd.business.concretes.VerifiedApplicantManager;
 import KampOdevECommerceBackEnd.dataAccess.concretes.VerifiedApplicantDao;
 import KampOdevECommerceBackEnd.entities.concretes.Applicant;
 
@@ -9,25 +8,30 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Ýsim ve soy isim Büyük Harle baþlayacak ve en az 2 harfli olacak
-		//email default@default.com
-		//en az 6 karakter uzunluðunda en az birer tane büyük ve küçük harf,özel karakter ve numara(0-9) olacak
+		//Isim ve soy isim Buyuk Harle baþlayacak ve en az 2 harfli olacak
+		//email default@default.abc
+		//en az 6 karakter uzunlugunda en az birer tane buyuk ve kucuk harf,ozel karakter ve numara(0-9) olacak
 		Applicant applicant1 = new Applicant("Seda", "Kýzýl", "okul@okul.com", "asd$FAS78");
 		Applicant applicant2 = new Applicant("Arda", "Kýrmýzý", "arda@example.org", "432wer&&AS");
 		Applicant applicant3 = new Applicant("Fik","Ret", "s@s.com", "y3&$*22A");
 		Applicant applicant4 = new Applicant("Fi","Ko", "fiko@example.com", "y3&$*22A");
-		//Ýlk dört true veriyor geri kalanlar false veriyor
+		//Ilk dort true veriyor geri kalanlar false veriyor
+		//Isim soyisim gecersiz
 		Applicant applicant5 = new Applicant("Fi","ko", "fiko@example.com", "y3&$*22A");
 		Applicant applicant6 = new Applicant("fi","Ko", "fiko@example.com", "y3&$*22A");
+		//Email gecersiz
 		Applicant applicant7 = new Applicant("Fi","Ko", "fiko.example.com", "y3&$*22A");
 		Applicant applicant8 = new Applicant("Fi","Ko", "fiko@examplecom", "y3&$*22A");
 		Applicant applicant9 = new Applicant("Fi","Ko", "@example.com", "y3&$*22A");
-		Applicant applicant11 = new Applicant("Fi","Ko", "fiko@example.c", "y3&$*22A");
+		Applicant applicant10 = new Applicant("Fi","Ko", "fiko@example.c", "y3&$*22A");
+		//Sifre gecersiz
 		Applicant applicant12 = new Applicant("Fi","Ko", "fiko@example.com", "3&$*22A");	
 		Applicant applicant13 = new Applicant("Fi","Ko", "fiko@example.com", "y3&$*22");
 		Applicant applicant14 = new Applicant("Fi","Ko", "fiko@example.com", "y3224A");	
 		Applicant applicant15 = new Applicant("Fi","Ko", "fiko@example.com", "y&$*AB");
 		Applicant applicant16 = new Applicant("Fi","Ko", "fiko@example.com", "y3$2A");
+		//Sistemde olan email ile ayný 
+		Applicant applicant11 = new Applicant("Alice", "Race", "alice@example.com", "123qwe%&AA" );
 		
 		VerifiedApplicantDao verifiedApp = new VerifiedApplicantDao();
 		System.out.println(verifiedApp.isVerified(applicant1));
@@ -39,6 +43,7 @@ public class Main {
 		System.out.println(verifiedApp.isVerified(applicant7));
 		System.out.println(verifiedApp.isVerified(applicant8));
 		System.out.println(verifiedApp.isVerified(applicant9));
+		System.out.println(verifiedApp.isVerified(applicant10));
 		System.out.println(verifiedApp.isVerified(applicant11));
 		System.out.println(verifiedApp.isVerified(applicant12));
 		System.out.println(verifiedApp.isVerified(applicant13));

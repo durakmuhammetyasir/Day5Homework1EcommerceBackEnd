@@ -35,9 +35,5 @@ public class AppUserManager extends VerifiedApplicantManager implements AppUserS
 	@Override
 	public void logIn(AppUser appUser) {
 				
-	}
-
-	
-
-	
+	}	
 }

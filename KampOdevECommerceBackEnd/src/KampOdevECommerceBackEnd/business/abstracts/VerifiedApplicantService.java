@@ -7,6 +7,4 @@ public interface VerifiedApplicantService {
 	boolean isEmailAnswered(Applicant applicant);
 	boolean add(Applicant applicant);
 	void feedback(Applicant applicant);
-	
-
 }
