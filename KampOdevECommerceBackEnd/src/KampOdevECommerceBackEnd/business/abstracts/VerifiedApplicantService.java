@@ -1,6 +1,5 @@
 package KampOdevECommerceBackEnd.business.abstracts;
 
-import KampOdevECommerceBackEnd.entities.concretes.AppUser;
 import KampOdevECommerceBackEnd.entities.concretes.Applicant;
 
 public interface VerifiedApplicantService {

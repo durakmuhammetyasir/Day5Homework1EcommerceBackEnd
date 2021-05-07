@@ -5,10 +5,8 @@ import java.util.regex.Pattern;
 
 import KampOdevECommerceBackEnd.business.abstracts.VerifiedApplicantService;
 import KampOdevECommerceBackEnd.core.AccessService;
-import KampOdevECommerceBackEnd.dataAccess.abstracts.AppUserDao;
 import KampOdevECommerceBackEnd.dataAccess.abstracts.ApplicantDao;
 import KampOdevECommerceBackEnd.dataAccess.concretes.VerifiedApplicantDao;
-import KampOdevECommerceBackEnd.entities.concretes.AppUser;
 import KampOdevECommerceBackEnd.entities.concretes.Applicant;
 
 public class VerifiedApplicantManager extends VerifiedApplicantDao implements VerifiedApplicantService{

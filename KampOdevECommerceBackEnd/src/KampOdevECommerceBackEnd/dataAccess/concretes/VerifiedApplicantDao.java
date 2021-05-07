@@ -6,7 +6,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import KampOdevECommerceBackEnd.dataAccess.abstracts.ApplicantDao;
-import KampOdevECommerceBackEnd.entities.concretes.AppUser;
 import KampOdevECommerceBackEnd.entities.concretes.Applicant;
 
 public class VerifiedApplicantDao implements ApplicantDao{
