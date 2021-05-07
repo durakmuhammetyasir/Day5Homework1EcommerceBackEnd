@@ -9,6 +9,6 @@ public interface ApplicantDao {
 	boolean checkUsedEmail(Applicant applicant);
 	boolean checkPassword(Applicant applicant);
 	boolean isVerified(Applicant applicant);
-	
+	void access(Applicant applicant);
 	
 }

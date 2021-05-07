@@ -6,15 +6,23 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import KampOdevECommerceBackEnd.dataAccess.abstracts.ApplicantDao;
+import KampOdevECommerceBackEnd.entities.concretes.AppUser;
 import KampOdevECommerceBackEnd.entities.concretes.Applicant;
 
 public class VerifiedApplicantDao implements ApplicantDao{
+	
+	
+	@Override
+	public void access(Applicant applicant) {
+		System.out.println("Sisteme uye olundu : " + applicant.getFirstName());
+		
+	} 
 	
 	@Override
 	public boolean checkFirstName(Applicant applicant) {
 		Pattern pattern1 = Pattern.compile("^(?=.*[A-Z].*[a-z]{1,}).{2,}$");
 		String _firstName = applicant.getFirstName();
-	    Matcher matcher = pattern1.matcher(_firstName);
+    	Matcher matcher = pattern1.matcher(_firstName);
 		boolean matchFound = matcher.find();
 	    if(matchFound) {
 	    	return true;
@@ -88,6 +96,7 @@ public class VerifiedApplicantDao implements ApplicantDao{
 		}
 	}
 
+	
 	
 }
 
